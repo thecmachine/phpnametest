@@ -1,0 +1,37 @@
+Coding challenge: 
+
+Given the attached CSV file representing a hierarchy of names, write a routine in PHP that reads all of this data, assembles it into an in-memory tree structure, and outputs this tree in pretty-printed JSON format.
+
+Within the CSV file, the `id` column is the primary key for each row. The `parent_id` column refers to the ID of each row's parent.  `parent_id = 0` denotes top-level names.
+
+The output should include names, IDs, and a listing of each row's direct descendants.  It should reflect the following structure:
+
+[
+    {
+        "id": 7,
+        "name": "A",
+        "children": [
+            {
+                "id": 34,
+                "name": "C",
+                "children": [
+                    {
+                        "id": 11,
+                        "name": "B",
+                        "children": []
+                    },
+                    {
+                        "id": 12,
+                        "name": "D",
+                        "children": [...]
+                    }
+                ]
+            },
+            ...
+        ]
+    },
+    ...
+]
+
+
+This challenge is intended to take 60 minutes or less.  Please email your work to cfarnham@w2ogroup.com along with the approximate amount of time it took to complete.
